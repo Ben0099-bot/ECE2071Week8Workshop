@@ -46,6 +46,9 @@ void test_calculate_mean(void) {
     int c[] = {-5, 5};
     check_float("mean of {-5, 5}",       0.0f, calculate_mean(c, 2), 0.01f);
 
+    int d[] = {42};
+    check_float("mean of {42}",          42.0f, calculate_mean(d, 1), 0.01f);
+
     // TODO: Add a test for a single-element array.
     //       int d[] = {42};
     //       The expected mean is 42.0.
@@ -84,6 +87,9 @@ void test_count_duplicates(void) {
 
     int c[] = {1, 2, 2, 3, 3, 3};
     check_int("mixed {1,2,2,3,3,3}",      3, count_duplicates(c, 6));
+
+    int d[] = {99};
+    check_int("mixed {99}",               0, count_duplicates(d, 1));
 
     // TODO: Add a test for a single-element array.
     //       int d[] = {99};
